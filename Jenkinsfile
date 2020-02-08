@@ -9,7 +9,7 @@ node {
   stage('Input to continue forther') {
    input('git checkout done Do you want to forther proceed?')  
   }
- def project_path=/"
+ def project_path="/"
  
  dir(project_path) {
     
