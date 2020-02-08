@@ -4,7 +4,7 @@
 #RUN rm -rf /usr/local/tomcat/webapps/*
 #COPY target/bikeshop-0.0.1-SNAPSHOT.war  /usr/local/tomcat/webapps/ROOT.war
 #EXPOSE 8080
-CMD ["catalina.sh", "run"]
+#CMD ["catalina.sh", "run"]
 FROM tomcat:8.0
 MAINTAINER Amit
 COPY target/bikeshop-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
