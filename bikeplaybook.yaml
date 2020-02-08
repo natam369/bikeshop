@@ -19,8 +19,8 @@
   - name: Remove ROOT folder initially
     command: rm -rf /opt/SP/apps/tomcat/webapps/ROOT
     
-  - name: Copy gomeoflife Project War Files
-    copy: src=target/collegebranch-0.0.1-SNAPSHOT.war dest=/opt/SP/apps/tomcat/webapps/ROOT.war mode=0644
+  - name: Copy bike Project War Files
+    copy: src=target/bikeshop-0.0.1-SNAPSHOT.war  dest=/opt/SP/apps/tomcat/webapps/ROOT.war mode=0644
     notify: 
     - Restart Tomcat
     
