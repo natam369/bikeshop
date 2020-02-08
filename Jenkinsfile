@@ -35,8 +35,7 @@ node {
    stage('Archive-Artifacts') {
    archiveArtifacts 'target/*.war'
   }
-  
-   stage('Jfrog Artifacory Upload') {
+ stage('Jfrog Artifacory Upload') {
         def server= Artifactory.server 'Artifactory'
                     def uploadSpec= """{
                         "files": [{
