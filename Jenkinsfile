@@ -6,10 +6,6 @@ node {
   stage('Git-Checkout') {
    git 'https://github.com/natam369/bikeshop.git'
   }
-  stage('Input to continue forther') {
-   input('git checkout done Do you want to forther proceed?')  
-  }
- 
  
   stage('Maven-Clean') {
    sh label: '', script: 'mvn clean'
@@ -49,10 +45,6 @@ node {
    stage('Docker-Stage-Deployment') {
    sh label: '', script: 'docker-compose up -d --build'
   }
-	
- stage('Input for deploy in production server') {            
-   input('Do you want to deploy into production server proceed?')
-        }
   stage('Geting Ready For Ansible') {
   sh label: 'Jenkins', script: "echo '<h1> TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>' > index.html"
 }  
