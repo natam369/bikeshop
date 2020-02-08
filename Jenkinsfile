@@ -50,10 +50,7 @@ node {
    stage('Docker-Stage-Deployment') {
    sh label: '', script: 'docker-compose up -d --build'
   }
-	 
-    stage('Input for deploy in Prod server') {  
-   input('Do you want the  Prod server to proceed?')      
-        }
+	
  stage('Input for deploy in production server') {            
    input('Do you want to deploy into production server proceed?')
         }
