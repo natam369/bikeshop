@@ -1,8 +1,8 @@
+  
 version: '2'
-
 
 services:
   bikeshop:
     build: . 
     ports:
-      - '30080:8080'
+      - '8085:8080'
