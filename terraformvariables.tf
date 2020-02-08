@@ -1,15 +1,15 @@
 variable "key_name" {
-  default = "kalyan"
+  default = "bikekey"
 }
 
 variable "pvt_key" {
-  default = "/root/.ssh/hkey.pem"
+  default = "/root/.ssh/bike.pem"
 }
 
 variable "us-east-zones" {
-  default = ["us-east-1a", "us-east-1b"]
+  default = ["us-west-1a", "us-west-1b"]
 }
 
 variable "sg-id" {
-  default = "sg-0892ec18630c25753"
+  default = "sg-0f05c1b1af97a1acc"
 }
