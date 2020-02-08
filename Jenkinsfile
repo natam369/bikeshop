@@ -9,10 +9,8 @@ node {
   stage('Input to continue forther') {
    input('git checkout done Do you want to forther proceed?')  
   }
- def project_path="/"
  
- dir(project_path) {
-    
+ 
   stage('Maven-Clean') {
    sh label: '', script: 'mvn clean'
   }
@@ -67,7 +65,7 @@ node {
    sh label: 'terraform', script: '/bin/terraform  init'
    sh label: 'terraform', script: '/bin/terraform  apply -input=false -auto-approve'
    }
-}
+
 
 notify('Job Completed')   
 } catch (err) {
