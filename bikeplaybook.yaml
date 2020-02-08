@@ -24,6 +24,8 @@
     
   - name: Copy bike Project War Files
     copy: src=target/bikeshop-0.0.1-SNAPSHOT.war  dest=/opt/SP/apps/tomcat/webapps/ mode=0644
+    notify: 
+    - Restart Tomcat
   handlers:
   - name: Restart Tomcat
     shell: "nohup sh /opt/SP/apps/tomcat/bin/catalina.sh start"
