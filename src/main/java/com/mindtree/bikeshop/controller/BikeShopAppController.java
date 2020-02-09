@@ -23,7 +23,7 @@ public class BikeShopAppController {
 	@Autowired
 	BikeShopAppService bikeShopAppService;
 
-	@RequestMapping("/")
+	@GetMapping(value = "/home")
 	public String homepage() {
 		return "homepage";
 	}
