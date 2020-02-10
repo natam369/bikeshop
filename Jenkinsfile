@@ -45,6 +45,9 @@ node {
    stage('Docker-Stage-Deployment') {
    sh label: '', script: 'docker-compose up -d --build'
   }
+	 stage('Deploy Approval') { 
+input "Deploy to prod?" 
+}
   stage('Geting Ready For Ansible') {
   sh label: 'Jenkins', script: "echo '<h1> TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>' > index.html"
 }  
