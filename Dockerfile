@@ -10,7 +10,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
  
 
-COPY target/BookingProblem-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/bikeshop-0.0.1-SNAPSHOT.war  /usr/local/tomcat/webapps/ROOT.war
 
  
 
